@@ -18,6 +18,7 @@ export class TooltipDirective implements OnInit {
 	}
 
 	show(){
+		console.log('Show');
 		this.tooltipElement.classList.remove('tooltip--active');
 	}
 

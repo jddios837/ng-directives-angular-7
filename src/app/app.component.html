@@ -13,9 +13,22 @@
     #myToolTip="tooltip">
     Enter your security code
     <span
-      (mouseover)="myTooltip.show()"
-      (mouseout)="myTooltip.hide()"
+      (mouseover)="myToolTip.show()"
+      (mouseout)="myToolTip.hide()"
       >(?)</span>
     <input type="text" name="" id="">
   </label>
+
+  <li *ngFor="let item of items; let i = index;">
+    {{ i }} Member: {{ item.name | json }}
+  </li>
+
+  <ng-template myFor [myForOf]="items" let-item let-i="index">
+    <li>
+      {{ i }} Member: {{ item.name | json }}
+    </li>
+  </ng-template>
+
+
+
 </div>  
